@@ -10,9 +10,9 @@ namespace Entidades.Entities
             Reserva = new HashSet<Reserva>();
         }
 
-        public short CodHabitacion { get; set; }
+        public short? CodHabitacion { get; set; }
         public string TipoHabitacion { get; set; }
-        public short CapacidadHabitacion { get; set; }
+        public short? CapacidadHabitacion { get; set; }
         public string EstadoHabitacion { get; set; }
 
         public virtual ICollection<Reserva> Reserva { get; set; }

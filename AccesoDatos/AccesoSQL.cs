@@ -95,7 +95,7 @@ namespace AccesoDatos
             {
                 contexto = new HOTELBEJUCOSAContext();
 
-                if (P_Entidad.CedulaCliente.Length == 0)
+                if (P_Entidad.CedulaCliente == null)
                 {
                     var consulta = (from x in contexto.Cliente
                                     select x).ToList();

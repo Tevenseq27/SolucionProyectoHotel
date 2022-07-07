@@ -37,23 +37,26 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route(nameof(ConsultarCliente))]
-        public IEnumerable<Cliente> ConsultarCliente(Cliente P_Entidad)
+        public IEnumerable<Cliente> ConsultarCliente()
         {
-            return _ilogica.ConsultarCliente(P_Entidad);
+            Cliente c = new Cliente();
+            return _ilogica.ConsultarCliente(c).ToList();
         }
 
         [HttpPost]
         [Route(nameof(ModificarCliente))]
-        public bool ModificarCliente(Cliente Entidad)
+        public bool ModificarCliente()
         {
-            return _ilogica.ModificarCliente(Entidad);
+            Cliente c = new Cliente();
+            return _ilogica.ModificarCliente(c);
         }
 
         [HttpPost]
         [Route(nameof(EliminarCliente))]
-        public bool EliminarCliente(Cliente Entidad)
+        public bool EliminarCliente()
         {
-            return _ilogica.EliminarCliente(Entidad);
+            Cliente c = new Cliente();
+            return _ilogica.EliminarCliente(c);
         }
         #endregion
 
@@ -68,9 +71,10 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route(nameof(ConsultarHabitacion))]
-        public IEnumerable<Habitacion> ConsultarHabitacion(Habitacion P_Entidad)
+        public IEnumerable<Habitacion> ConsultarHabitacion()
         {
-            return _ilogica.ConsultarHabitacion(P_Entidad);
+            Habitacion h = new Habitacion();
+            return _ilogica.ConsultarHabitacion(h).ToList();
         }
 
         [HttpPost]

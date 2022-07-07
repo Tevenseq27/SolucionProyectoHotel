@@ -19,4 +19,5 @@ namespace Entidades.Entities
 
         public virtual ICollection<Reserva> Reserva { get; set; }
     }
+
 }
