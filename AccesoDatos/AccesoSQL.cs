@@ -195,7 +195,7 @@ namespace AccesoDatos
             {
                 contexto = new HOTELBEJUCOSAContext();
 
-                if (P_Entidad.CodReserva.Length == 0)
+                if (Convert.ToString(P_Entidad.IdReserva).Length == 0)
                 {
                     var consulta = (from x in contexto.Reserva
                                     select x).ToList();
@@ -211,7 +211,7 @@ namespace AccesoDatos
                 else
                 {
                     var consulta = (from x in contexto.Reserva
-                                    where x.CodReserva.Equals(P_Entidad.CodReserva)
+                                    where x.IdReserva.Equals(P_Entidad.IdReserva)
                                     select x).ToList();
 
                     if (consulta != null)

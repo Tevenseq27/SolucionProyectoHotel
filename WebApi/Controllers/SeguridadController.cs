@@ -1,10 +1,8 @@
 ﻿using Entidades.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Negocio;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace WebApi.Controllers
 {
@@ -79,16 +77,18 @@ namespace WebApi.Controllers
 
         [HttpPost]
         [Route(nameof(ModificarHabitacion))]
-        public bool ModificarHabitacion(Habitacion Entidad)
+        public bool ModificarHabitacion()
         {
-            return _ilogica.ModificarHabitacion(Entidad);
+            Habitacion h = new Habitacion();
+            return _ilogica.ModificarHabitacion(h);
         }
 
         [HttpPost]
         [Route(nameof(EliminarHabitacion))]
-        public bool EliminarHabitacion(Habitacion Entidad)
+        public bool EliminarHabitacion()
         {
-            return _ilogica.EliminarHabitacion(Entidad);
+            Habitacion h = new Habitacion();
+            return _ilogica.EliminarHabitacion(h);
         }
         #endregion
 
@@ -103,9 +103,10 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route(nameof(ConsultarReserva))]
-        public IEnumerable<Reserva> ConsultarReserva(Reserva P_Entidad)
+        public IEnumerable<Reserva> ConsultarReserva()
         {
-            return _ilogica.ConsultarReserva(P_Entidad);
+            Reserva r = new Reserva();
+            return _ilogica.ConsultarReserva(r).ToList();
         }
 
         [HttpPost]
