@@ -312,7 +312,7 @@ namespace AccesoDatos
             {
                 contexto = new HOTELBEJUCOSAContext();
                 var consulta = (from x in contexto.Reserva
-                                where x.CodReserva.Equals(P_Entidad.CodReserva)
+                                where x.IdReserva.Equals(P_Entidad.IdReserva)
                                 select x).FirstOrDefault();
 
                 if (consulta != null)
@@ -419,7 +419,7 @@ namespace AccesoDatos
             {
                 contexto = new HOTELBEJUCOSAContext();
                 var consulta = (from x in contexto.Reserva
-                                where x.CodReserva.Equals(P_Entidad.CodReserva)
+                                where x.IdReserva.Equals(P_Entidad.IdReserva)
                                 select x).FirstOrDefault();
 
                 if (consulta != null)
