@@ -43,18 +43,16 @@ namespace WebApi.Controllers
 
         [HttpPost]
         [Route(nameof(ModificarCliente))]
-        public bool ModificarCliente()
+        public bool ModificarCliente(Cliente P_Entidad)
         {
-            Cliente c = new Cliente();
-            return _ilogica.ModificarCliente(c);
+            return _ilogica.ModificarCliente(P_Entidad);
         }
 
         [HttpPost]
         [Route(nameof(EliminarCliente))]
-        public bool EliminarCliente()
+        public bool EliminarCliente(Cliente P_Entidad)
         {
-            Cliente c = new Cliente();
-            return _ilogica.EliminarCliente(c);
+            return _ilogica.EliminarCliente(P_Entidad);
         }
         #endregion
 
@@ -77,18 +75,16 @@ namespace WebApi.Controllers
 
         [HttpPost]
         [Route(nameof(ModificarHabitacion))]
-        public bool ModificarHabitacion()
+        public bool ModificarHabitacion(Habitacion P_Entidad)
         {
-            Habitacion h = new Habitacion();
-            return _ilogica.ModificarHabitacion(h);
+            return _ilogica.ModificarHabitacion(P_Entidad);
         }
 
         [HttpPost]
         [Route(nameof(EliminarHabitacion))]
-        public bool EliminarHabitacion()
+        public bool EliminarHabitacion(Habitacion P_Entidad)
         {
-            Habitacion h = new Habitacion();
-            return _ilogica.EliminarHabitacion(h);
+            return _ilogica.EliminarHabitacion(P_Entidad);
         }
         #endregion
 
